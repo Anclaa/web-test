@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronica Alambrito</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Inventario Electronica Alambrito</h1>
+        <button onclick="agregarProducto()">Agregar Producto</button>
+        <button onclick="verInventario()">Ver Inventario</button>
+        <button onclick="buscarProducto()">Buscar</button>
+
+    </div>
+
+    <div id="agregarProductoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2>Agregar Producto</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad">
+            <label for="cantidad">Precio:</label>
+            <input type="number" id="precio">
+            <button onclick="guardarProducto()">Guardar</button>
+        </div>
+    </div>
+
+    <div id="verInventarioModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2>Inventario</h2>
+            <ul id="inventarioLista"></ul>
+        </div>
+    </div>
+
+    <div id="BuscarModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2>Busqueda</h2>
+                <label for="nombreBuscar">Nombre:</label>
+                <input typr="text" id="nombreBuscar">
+                <button onclick="buscarProductoPorNombre()">Buscar</button>
+                <ul id="resultadoBusqueda"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
